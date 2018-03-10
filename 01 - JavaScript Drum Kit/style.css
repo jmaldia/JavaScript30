@@ -6,6 +6,8 @@ html {
 	font-size: 12px;
 	font-weight: 800;
 	color: #e1b12c;
+	margin: 0;
+ 	padding: 0;
 }
 
 body {
@@ -14,15 +16,24 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 }
+/*Instructions*/
+.instuctions {
+	padding: 20px;
+	text-align: center;
+  	font-size: 1.3rem;
+}
 
+/*Keyboard*/
 .container {
-	margin: 0 auto;
 	position: absolute;
-	top: 45%;
+	top: 43%;
 	left:10%;
 	right: 10%;
 	width: 80%;
+	margin: 0 auto;
+	align-items: center;
 	text-align: center;
+	justify-content: center;
 }
 
 .keys {
@@ -30,18 +41,21 @@ body {
 	margin: 10px;
 	width: 75px;
 	height: 75px;
-	border: 3px #dcdde1 solid;
+	border: .4rem #dcdde1 solid;
 	border-radius: 50%;
 	display: inline-block;
 	background: #192a56;
 	opacity: .85;
 	line-height: 180%;
 	text-transform: uppercase;
-
+	transition: all .07s ease;
+  	text-shadow: 0 0 .5rem #353b48;
 }
+
 .keys p {
 	margin-top: 25%;
 }
+
 
 .letter {
 	font-family: 'Black Ops One', cursive, arial;
@@ -49,15 +63,25 @@ body {
 	color: #f5f6fa;
 }
 
+/*Keyboard Keys Pressed*/
+.pressed, .keys:hover {
+	transform: scale(.95);
+	border: .4rem #e1b12c solid;
+	box-shadow: 0 0 1rem #e1b12c;
+}
+
 /*Media Queries*/
 @media (max-width: 450px) { 
 	.container {
-		top: 15%;
+		top: 0%;
+		left:0%;
+		right: 0%;
+		transform: scale(.75);
 	}
 }
 
 @media (min-width: 451px) and (max-width: 850px) { 
 	.container {
-		top: 30%;
+		top: 40%;
 	}
 }
