@@ -1,0 +1,98 @@
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+    text-align: center;
+}
+
+body {
+	background: #ADA996; /* fallback for old browsers */ 
+	background: -webkit-linear-gradient(to top, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* Chrome 10-25, Safari 5.1-6 */ 
+	background: linear-gradient(to top, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.clock {
+	position: relative;
+	
+	margin: 0 auto;
+	margin-top: 250px;
+	padding: 10px;
+	padding-right: 12px;
+
+	border-radius: 50%;
+	border: 20px #2f3640 solid;
+	background-image: url("clock-face.gif");
+    width: 330px;
+	height: 330px;
+	background: #74ebd5; /* fallback for old browsers */ 
+	background: -webkit-linear-gradient(to right, #74ebd5, #acb6e5); /* Chrome 10-25, Safari 5.1-6 */ 
+	background: linear-gradient(to right, #74ebd5, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow:
+        0 0 0 3px rgba(0,0,0,0.1),
+        inset 0 0 0 2px #EFEFEF,
+        inset 0 0 1px black,
+        0 0 3px rgba(0,0,0,0.2);
+}
+
+.circle {
+	position: absolute;
+	top: 48%;
+	left: 47%;
+	z-index: 1;
+	width: 30px;
+	height: 30px;
+	background-color: #2f3640;
+	border-radius: 50%;
+	box-shadow:
+        0 0 0 2px rgba(0,0,0,0.1),
+        inset 0 0 0 1px #EFEFEF,
+        inset 0 0 1px black,
+        0 0 3px rgba(0,0,0,0.2);
+}
+
+.hand {
+	position: absolute;
+	top:50%;
+
+	width:48%;
+	height:15px;
+
+	border-radius: 10px;
+	background-color: #2f3640;
+	box-shadow:
+        0 0 0 2px rgba(0,0,0,0.1),
+        inset 0 0 0 1px #EFEFEF,
+        inset 0 0 1px black,
+        0 0 3px rgba(0,0,0,0.2);
+
+
+	transform: rotate(90deg);
+	transform-origin: 100%;
+    transition: all 0.05s;
+	transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.text {
+	transform: rotate(270deg);
+	font-family: arial;
+	font-weight: 100;
+	font-size: 10px;
+	text-align: center;
+	margin-top: 2px;
+	margin-right: 140px;
+
+	color: #f5f6fa;
+}
+
+.minutes .text {
+	margin-right: 110px;
+}
+
+.seconds {
+	background-color: #c23616;
+}
+
+.minutes {
+	background-color: #273c75;
+	width:40%;
+	margin-left: 8%
+}
