@@ -1,5 +1,5 @@
 html {
-	margin: 0;
+    margin: 0;
 	padding: 0;
 	height: 100%;
     text-align: center;
@@ -9,6 +9,9 @@ body {
 	background: #ADA996; /* fallback for old browsers */ 
 	background: -webkit-linear-gradient(to top, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* Chrome 10-25, Safari 5.1-6 */ 
 	background: linear-gradient(to top, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	/*background:#018DED url(space.jpeg);*/
+	background-size:cover;
+    background-position: center;
 }
 .clock {
 	position: relative;
@@ -19,10 +22,9 @@ body {
 	padding-right: 12px;
 
 	border-radius: 50%;
-	border: 20px #2f3640 solid;
-	background-image: url("clock-face.gif");
-    width: 330px;
-	height: 330px;
+	border: 20px #192a56 solid;
+    width: 430px;
+	height: 430px;
 	background: #74ebd5; /* fallback for old browsers */ 
 	background: -webkit-linear-gradient(to right, #74ebd5, #acb6e5); /* Chrome 10-25, Safari 5.1-6 */ 
 	background: linear-gradient(to right, #74ebd5, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -31,6 +33,9 @@ body {
         inset 0 0 0 2px #EFEFEF,
         inset 0 0 1px black,
         0 0 3px rgba(0,0,0,0.2);
+	background: url(clock-face.gif);
+	background-size:cover;
+    background-position: center;
 }
 
 .circle {
@@ -57,7 +62,7 @@ body {
 	height:15px;
 
 	border-radius: 10px;
-	background-color: #2f3640;
+	background-color: #273c75;
 	box-shadow:
         0 0 0 2px rgba(0,0,0,0.1),
         inset 0 0 0 1px #EFEFEF,
@@ -78,21 +83,40 @@ body {
 	font-size: 10px;
 	text-align: center;
 	margin-top: 2px;
-	margin-right: 140px;
+	margin-right: 180px;
 
 	color: #f5f6fa;
 }
 
-.minutes .text {
-	margin-right: 110px;
+.hours .text {
+	margin-right: 150px;
 }
 
 .seconds {
 	background-color: #c23616;
 }
 
-.minutes {
-	background-color: #273c75;
+.hours {
+	background-color: #192a56;
 	width:40%;
 	margin-left: 8%
 }
+
+
+@media (max-width: 600px) { 
+	.clock {
+		margin: 30px auto;
+		width: 330px;
+		height: 330px;
+		transform: scale(.75);
+	}
+
+	.text {
+		margin-right: 140px;
+	}
+
+	.hours .text {
+		margin-right: 110px;
+	}
+}
+
