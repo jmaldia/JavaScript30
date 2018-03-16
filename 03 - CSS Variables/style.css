@@ -52,6 +52,7 @@ input {
 	margin: 0 auto;
 	padding: var(--border);
 	background: var(--color);
+	box-sizing: border-box;
 	border-radius: 10px;
 	box-shadow: 7px 7px 8px 4px rgba(113, 128, 147,.4);
 }
