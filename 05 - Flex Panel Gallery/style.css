@@ -81,6 +81,7 @@ body {
 	font-size:40px;
 }
 
+/*Moves text in and out of view. Controlled by JS.*/
 .panel > *:first-child { transform: translateY(-100%); }
 .panel.open-active > *:first-child { transform: translateY(0); }
 .panel > *:last-child { transform: translateY(100%); }
